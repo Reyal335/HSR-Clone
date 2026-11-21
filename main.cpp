@@ -1,0 +1,62 @@
+#include <iostream> 
+#include <ncurses\curses.h>
+#include "characters/Stelle/Stelle.cpp"
+
+using namespace std;
+
+int cursesWindow() {
+    cout << "testing this c++ application" << endl;
+    initscr();
+    cbreak();
+    keypad(stdscr, TRUE);
+    noecho();
+    curs_set(0);
+    refresh();
+
+    int height = 10, width = 40, start_y = 0, start_x = 0;
+    WINDOW* win = newwin(height, width, start_y, start_x);
+
+    if (has_colors() == FALSE) {
+        endwin();
+        std::cout << "Your terminal doesn't support colours." << std::endl;
+        return 1;
+    }
+
+    box(win, 0, 0);
+    mvwprintw(win, 1, 2, "Hello from ncurses!");
+    mvwprintw(win, 3, 2, "Press any key to exit...");
+    wrefresh(win);
+
+    getch();
+    std::cout << "hello reressr getch";
+    mvwprintw(win, 3, 2, "Press any key to exit...");
+
+    delwin(win);
+    endwin();
+
+    return 0;
+}
+
+int test() {
+    std::unique_ptr<Stelle> stelle = std::make_unique<Stelle>();
+    std::cout << stelle->getName();
+    return 0;
+}
+
+
+int main() {
+    char input;
+
+    std::cout << "Select Mode: " << std::endl;
+    std::cout << "[T] CLI test" << std::endl;
+    std::cout << "[N] NCurses" << std::endl;
+    std::cin >> input;
+
+    if (input == 't') {
+        test();
+    } else {
+        cursesWindow();
+    }
+
+    return 0;
+}
