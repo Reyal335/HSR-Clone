@@ -1,0 +1,6 @@
+{
+    "code-runner.executorMap": {
+        "cpp": "cd \"$workspaceRoot\" && g++ -std=c++17 $(find . -name '*.cpp') -o program.exe -lncursesw && ./program.exe"
+    },
+    "code-runner.runInTerminal": true
+}

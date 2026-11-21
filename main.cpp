@@ -39,7 +39,7 @@ int cursesWindow() {
 
 int test() {
     std::unique_ptr<Stelle> stelle = std::make_unique<Stelle>();
-    std::cout << stelle->getName();
+    std::cout << "Character Name: " << stelle->getName();
     return 0;
 }
 
