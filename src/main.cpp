@@ -1,6 +1,8 @@
 #include <iostream> 
 #include <ncurses\curses.h>
-#include "characters/Stelle/Stelle.cpp"
+#include <windows.h>
+#include "characters/Stelle/Stelle.hpp"
+#include "enemies/VoidRanger/VoidRanger.hpp"
 
 using namespace std;
 
@@ -39,12 +41,26 @@ int cursesWindow() {
 
 int test() {
     std::unique_ptr<Stelle> stelle = std::make_unique<Stelle>();
-    std::cout << "Character Name: " << stelle->getName();
+    std::unique_ptr<VoidRanger> voidRanger = std::make_unique<VoidRanger>();
+    std::cout << "Stelle encounters a voidranger! " << std::endl;
+
+    std::cout << stelle->getName();
+    stelle->getHealth();
+    std::cout << voidRanger->getName();
+    voidRanger->getHealth();
+
+    stelle->performBasic(*voidRanger);
+    voidRanger->getHealth();
+
     return 0;
 }
 
 
 int main() {
+    #ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+    #endif
+
     char input;
 
     std::cout << "Select Mode: " << std::endl;

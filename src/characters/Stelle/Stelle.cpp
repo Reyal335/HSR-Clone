@@ -1,12 +1,10 @@
-#pragma once
-#include "../../entities/Character.hpp"
-#include "../../entities/Enums.hpp"
-#include "Abilities/FarewellHit.cpp"
+#include "Stelle.hpp"
 
-class Stelle : public Character {
-    public:
-        Stelle() : Character("Stelle", Path::Destruction, 
-            Element::Physical, 163, 84, 62, 100, 0, 60) {
-                    basic = std::make_unique<FarewellHit>();
-                }
-};
+std::unique_ptr<Basic> createStelleBasic();
+
+Stelle::Stelle()
+    : Character("Stelle", Path::Destruction, Element::Physical,
+                163, 84, 62, 100, 0, 60) {
+    basic = createStelleBasic();
+    setGameStats();
+}

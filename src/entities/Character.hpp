@@ -9,6 +9,8 @@
 #include "Enums.hpp"
 #include "Status_Effect.hpp"
 
+class Enemy;
+
 class Character{
 protected:
     std::string name;
@@ -34,20 +36,20 @@ public:
     Character(std::string name_, Path path_, Element element_,
         int baseHealth_, int baseAtk_, int baseDef_, int baseSpd_, int baseCrit_, int baseUltCharge_) 
         : name(std::move(name_)), path(std::move(path_)), element(std::move(element_)),
-            baseHealth(std::move(baseHealth_)), baseAtk(std::move(baseAtk_)), baseDef(std::move(baseDef_)),
-            baseSpd(std::move(baseSpd_)), baseCrit(std::move(baseCrit_)), baseUltCharge(std::move(baseUltCharge_)) {}
+            baseHealth(baseHealth_), baseAtk(baseAtk_), baseDef(baseDef_),
+            baseSpd(baseSpd_), baseCrit(baseCrit_), baseUltCharge(baseUltCharge_) {}
 
     void takeDamage(int damage);
-    int getHealth() const;
+    void getHealth() const;
 
 
     std::string getName() const;
 
-    void resetGameStats();
+    void setGameStats();
 
-    void performBasic() {
+    void performBasic(Enemy& enemy) {
         if (basic) {
-            basic->useBasic();
+            basic->useBasic(atk, enemy);
         }
     }
 

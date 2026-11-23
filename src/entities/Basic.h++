@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
+#include <utility>
 
+class Enemy;
 
 class Basic{
 private:
@@ -12,5 +14,5 @@ public:
         : name(std::move(basicName)), element(std::move(basicElement)) {}
 
     virtual ~Basic() = default;
-    virtual void useBasic() = 0;
+    virtual void useBasic(int atk, Enemy& enemy) = 0;
 };
