@@ -6,7 +6,7 @@
 #include "Basic.h++"
 #include "Passive.h++"
 #include "Ult.h++"
-#include "Enums.hpp"
+#include "CharacterEnums.hpp"
 #include "Status_Effect.hpp"
 
 class Enemy{

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "Enums.hpp"
+#include "CharacterEnums.hpp"
 
 class Ult{
 private:
