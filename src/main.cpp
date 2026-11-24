@@ -1,6 +1,7 @@
 #include <iostream> 
 #include <ncurses\curses.h>
 #include <windows.h>
+#include <helpers/magic_enum.hpp>
 #include "characters/Stelle/Stelle.hpp"
 #include "enemies/VoidRanger/VoidRanger.hpp"
 

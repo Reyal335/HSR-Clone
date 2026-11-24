@@ -1,4 +1,5 @@
 #include "EnemyLineup.hpp"
+#include "Enemy.hpp"
 #include <iostream>
 #include <memory>
 #include <random>
@@ -59,4 +60,15 @@ bool EnemyLineup::isOccupied(int iIndex) {
             return true;
         } else return false;
     } 
+}
+
+void EnemyLineup::displayLineup() {
+    std::cout << "Enemy Lineup: " << std::endl;
+    for (const auto& slot : slots) {
+        if (!slot) {
+            std::cout << "  " << "[ ]" << "  ";
+        } else {
+            std::cout << "  " << slot->getName() << "  ";
+        }
+    }
 }

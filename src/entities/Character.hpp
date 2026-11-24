@@ -22,6 +22,8 @@ protected:
 
     // Game time stats
     int maxHealth, health, atk, def, spd, crit, shield, ultCharge;
+
+    bool isAlive;
     
     // Character Abilities
     std::unique_ptr<Basic> basic;
