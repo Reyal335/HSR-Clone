@@ -59,7 +59,7 @@ bool EnemyLineup::isOccupied(int iIndex) {
         if (slots[static_cast<size_t>(iIndex)] != nullptr) {
             return true;
         } else return false;
-    } 
+    } else return true;
 }
 
 void EnemyLineup::displayLineup() {

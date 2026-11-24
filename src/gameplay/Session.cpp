@@ -14,7 +14,7 @@ void Session::startSession(int nwaves, int nenemies) {
             std::unique_ptr<VoidRanger> voidRanger = std::make_unique<VoidRanger>();
             enemyLineup->placeEnemy(std::move(voidRanger));
         }
-        waves.push_back(enemyLineup);
+        waves.push_back(std::move(enemyLineup));
     }
 
     // Gameplay loop of session

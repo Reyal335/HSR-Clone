@@ -1,9 +1,12 @@
 #include <iostream> 
 #include <ncurses\curses.h>
 #include <windows.h>
-#include <helpers/magic_enum.hpp>
+#include "./helpers/magic_enum.hpp"
 #include "characters/Stelle/Stelle.hpp"
 #include "enemies/VoidRanger/VoidRanger.hpp"
+#include "gameplay/Session.hpp"
+#include <vector>
+#include "entities/Character.hpp"
 
 using namespace std;
 
@@ -41,17 +44,24 @@ int cursesWindow() {
 }
 
 int test() {
+
+
     std::unique_ptr<Stelle> stelle = std::make_unique<Stelle>();
     std::unique_ptr<VoidRanger> voidRanger = std::make_unique<VoidRanger>();
-    std::cout << "Stelle encounters a voidranger! " << std::endl;
+    // std::cout << "Stelle encounters a voidranger! " << std::endl;
 
-    std::cout << stelle->getName();
-    stelle->getHealth();
-    std::cout << voidRanger->getName();
-    voidRanger->getHealth();
+    // std::cout << stelle->getName();
+    // stelle->getHealth();
+    // std::cout << voidRanger->getName();
+    // voidRanger->getHealth();
 
-    stelle->performBasic(*voidRanger);
-    voidRanger->getHealth();
+    // stelle->performBasic(*voidRanger);
+    // voidRanger->getHealth();
+    std::vector<std::unique_ptr<Character>> characters;
+    characters.push_back(std::move(stelle));
+
+    Session session{std::move(characters)};
+    session.startSession(1, 2);
 
     return 0;
 }
