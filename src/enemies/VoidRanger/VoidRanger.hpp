@@ -4,5 +4,5 @@
 
 class VoidRanger : public Enemy {
 public:
-    VoidRanger();
+    VoidRanger(int id_);
 };

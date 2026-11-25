@@ -2,16 +2,21 @@
 #include <string>
 #include <iostream>
 #include "../../../entities/Enemy.hpp"
+#include "../../../gameplay/BattleContext.hpp"
+
+class BattleContext;
 
 class StelleFarewellHit : public Basic {
 
 public:
         StelleFarewellHit() : Basic("Farewell Hit", "Physical") {}
 
-        void useBasic(int atk, Enemy& enemy) override {
+        void useBasic(BattleContext& battleContext) override {
+            int casterAtk = battleContext.caster.getAtk();
+
             std::cout << "> Stelle uses Farewell Hit! Hit her bat against " << std::endl;
-            std::cout << "> Dealt " << atk << " damage to " << enemy.getName() << "!";
-            enemy.takeDamage(atk);
+            std::cout << "> Dealt " << casterAtk << " damage to " << battleContext.currentTarget->getName() << "!";
+            battleContext.currentTarget->takeDamage(casterAtk);
         }
 };
 

@@ -8,8 +8,13 @@
 #include "Ult.h++"
 #include "CharacterEnums.hpp"
 #include "Status_Effect.hpp"
+#include "../gameplay/BattleContext.hpp"
+#include "Entity.hpp"
 
-class Enemy{
+class BattleContext;
+class Entity;
+
+class Enemy : public Entity {
 protected:
     std::string name;
     Element element;
@@ -30,11 +35,11 @@ protected:
     std::vector<std::unique_ptr<StatusEffect>> status_effects;
 
 public:
-    Enemy(std::string name_, Element element_,
+    Enemy(int id_, std::string name_, Element element_,
         int baseHealth_, int baseAtk_, int baseDef_, int baseSpd_, int baseCrit_, int baseUltCharge_) 
         : name(std::move(name_)), element(std::move(element_)),
             baseHealth(std::move(baseHealth_)), baseAtk(std::move(baseAtk_)), baseDef(std::move(baseDef_)),
-            baseSpd(std::move(baseSpd_)), baseCrit(std::move(baseCrit_)), baseUltCharge(std::move(baseUltCharge_)) {}
+            baseSpd(std::move(baseSpd_)), baseCrit(std::move(baseCrit_)), baseUltCharge(std::move(baseUltCharge_)), Entity(id_) {}
 
     
     void getHealth() const;
@@ -45,14 +50,15 @@ public:
     void setGameStats();
 
     // Outgoing actions
-    void performBasic(Enemy& enemy) {
+    void performBasic(BattleContext& battleContext) {
         if (basic) {
-            basic->useBasic(atk, enemy);
+            basic->useBasic(battleContext);
         }
     }
 
 
     // Incoming actions
-   void takeDamage(int damage);
+    void takeDamage(int damage);
+    void heal(int heal);
 
 };

@@ -1,6 +1,9 @@
 #pragma once
 #include <string>
 #include <utility>
+#include "../gameplay/BattleContext.hpp"
+
+class BattleContext;
 
 class Enemy;
 
@@ -14,5 +17,5 @@ public:
         : name(std::move(basicName)), element(std::move(basicElement)) {}
 
     virtual ~Basic() = default;
-    virtual void useBasic(int atk, Enemy& enemy) = 0;
+    virtual void useBasic(BattleContext& battleContext) = 0;
 };

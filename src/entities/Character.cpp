@@ -1,6 +1,9 @@
 #include "Character.hpp"
 #include <string>
 #include <iostream>
+#include "CharacterEnums.hpp"
+
+enum class Element;
 
 void Character::takeDamage(int damage) {
     if (health < damage) {
@@ -10,7 +13,7 @@ void Character::takeDamage(int damage) {
     }
 }
 
-void Character::getHealth() const {
+int Character::getHealth() const {
     // Health: ████████████████████ 163 hp
     std::cout << "Health: ";
 
@@ -19,7 +22,15 @@ void Character::getHealth() const {
     }
 
     std::cout << " " << health;
+    return health;
+}
 
+int Character::getAtk() const {
+    return atk;
+}
+
+Element Character::getElement() const {
+    return element;
 }
 
 std::string Character::getName() const {

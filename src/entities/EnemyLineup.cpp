@@ -72,3 +72,7 @@ void EnemyLineup::displayLineup() {
         }
     }
 }
+
+std::array<std::unique_ptr<Enemy>, 5>& EnemyLineup::getLineup () {
+    return slots;
+}

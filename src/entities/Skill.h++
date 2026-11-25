@@ -2,6 +2,9 @@
 
 #include <string>
 #include "CharacterEnums.hpp"
+#include "../gameplay/BattleContext.hpp"
+
+class BattleContext;
 
 class Skill{
 private:
@@ -15,5 +18,5 @@ public:
         : name(std::move(Name_)), element(std::move(Element_)), skillPoints(std::move(skillPoints_)) {}
 
     virtual ~Skill() = default;
-    virtual void useSkill() = 0;
+    virtual void useSkill(BattleContext& context) = 0;
 };

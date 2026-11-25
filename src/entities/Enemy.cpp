@@ -1,13 +1,10 @@
 #include "Enemy.hpp"
 #include <string>
 #include <iostream>
+#include <algorithm>
 
 void Enemy::takeDamage(int damage) {
-    if (damage > health) {
-        health = 0;
-    } else {
-        health -= damage;
-    }
+    health = std::clamp(health - damage, 0, maxHealth);
     std::cout << "Enemy took damage!" << health;
 }
 
@@ -21,6 +18,11 @@ void Enemy::getHealth() const {
 
     std::cout << " " << health;
 
+}
+
+void Enemy::heal(int heal) {
+    health = std::clamp(health + heal, 0, maxHealth);
+    std::cout << "Enemy healed " << heal << " hp";
 }
 
 std::string Enemy::getName() const {

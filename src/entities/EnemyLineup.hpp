@@ -28,4 +28,6 @@ public:
     void placeEnemy (std::unique_ptr<Enemy> newEnemy);
     bool isOccupied(int index);
     void displayLineup();
+
+    std::array<std::unique_ptr<Enemy>, 5>& getLineup ();
 };

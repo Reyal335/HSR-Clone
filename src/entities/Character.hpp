@@ -8,10 +8,14 @@
 #include "Ult.h++"
 #include "CharacterEnums.hpp"
 #include "Status_Effect.hpp"
+#include "../gameplay/BattleContext.hpp"
+#include "Entity.hpp"
 
+class BattleContext;
 class Enemy;
+class Entity;
 
-class Character{
+class Character : public Entity {
 protected:
     std::string name;
     Path path;
@@ -35,24 +39,29 @@ protected:
     std::vector<std::unique_ptr<StatusEffect>> status_effects;
 
 public:
-    Character(std::string name_, Path path_, Element element_,
+    Character(int id, std::string name_, Path path_, Element element_,
         int baseHealth_, int baseAtk_, int baseDef_, int baseSpd_, int baseCrit_, int baseUltCharge_) 
         : name(std::move(name_)), path(std::move(path_)), element(std::move(element_)),
             baseHealth(baseHealth_), baseAtk(baseAtk_), baseDef(baseDef_),
-            baseSpd(baseSpd_), baseCrit(baseCrit_), baseUltCharge(baseUltCharge_) {}
+            baseSpd(baseSpd_), baseCrit(baseCrit_), baseUltCharge(baseUltCharge_), Entity(id) {}
 
     void takeDamage(int damage);
-    void getHealth() const;
 
+    // Getters for in game stats
+    int getHealth() const;
+    int getAtk() const;
+    Element getElement() const;
 
     std::string getName() const;
 
     void setGameStats();
 
-    void performBasic(Enemy& enemy) {
+    void performBasic(BattleContext& battleContext) {
         if (basic) {
-            basic->useBasic(atk, enemy);
+            basic->useBasic(battleContext);
         }
     }
+
+    // Passives activators for listeners
 
 };

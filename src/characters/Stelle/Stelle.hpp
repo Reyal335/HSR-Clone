@@ -4,5 +4,5 @@
 
 class Stelle : public Character {
 public:
-    Stelle();
+    Stelle(int id_);
 };
