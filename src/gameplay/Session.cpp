@@ -25,7 +25,7 @@ void Session::startSession(int nwaves, int nenemies) {
     // Gameplay loop of session
     for (auto& wave : waves) {
         ActionBar actionBar;
-        actionBar.loadQueue(characters, enemies);
+        actionBar.loadQueue(characters, wave->getLineup());
         actionBar.printQueue();
         // Loops until enemy count is 0 for each wave
         // while (wave->getCount() != 0) {

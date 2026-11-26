@@ -31,5 +31,5 @@ public:
     void displayLineup();
     size_t getCount();
 
-    std::array<std::unique_ptr<Enemy>, 5>& getLineup ();
+    std::array<std::unique_ptr<Enemy>, 5>& getLineup();
 };

@@ -16,7 +16,7 @@ private:
 
 public:
     void loadQueue(std::vector<std::unique_ptr<Character>>& characters, 
-        std::vector<std::unique_ptr<Enemy>>& enemies);
+        std::array<std::unique_ptr<Enemy>, 5>& enemies);
 
     void printQueue();
 

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <memory>
 #include <random>
+#include <array>
 
 class Enemy;
 
@@ -79,7 +80,7 @@ void EnemyLineup::displayLineup() {
     }
 }
 
-std::array<std::unique_ptr<Enemy>, 5>& EnemyLineup::getLineup () {
+std::array<std::unique_ptr<Enemy>, 5>& EnemyLineup::getLineup() {
     return slots;
 }
 
