@@ -1,4 +1,4 @@
-#include "../../../entities/Skill.h++"
+#include "../../../entities/Skill.hpp"
 #include "../../../gameplay/BattleContext.hpp"
 #include "../../../entities/CharacterEnums.hpp"
 

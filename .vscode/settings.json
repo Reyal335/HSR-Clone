@@ -1,6 +1,7 @@
 {
     "code-runner.executorMap": {
-        "cpp": "cd \"$workspaceRoot\" && g++ -std=c++17 $(find . -name '*.cpp') -o program.exe -lncursesw && ./program.exe"
+        "cpp": "cd \"$workspaceRoot\" && g++ -std=c++17 $(find src -name '*.cpp') -o program.exe -lncursesw && ./program.exe"
     },
-    "code-runner.runInTerminal": true
+    "code-runner.runInTerminal": true,
+    "clangd.arguments": ["--query-driver=D:/msys64/ucrt64/bin/*"]
 }

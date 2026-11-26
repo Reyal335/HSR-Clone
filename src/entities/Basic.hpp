@@ -1,9 +1,8 @@
 #pragma once
 #include <string>
 #include <utility>
-#include "../gameplay/BattleContext.hpp"
 
-class BattleContext;
+struct BattleContext;
 
 class Enemy;
 

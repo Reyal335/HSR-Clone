@@ -2,10 +2,11 @@
 #include <string>
 #include <memory>
 #include <vector>
-#include "Skill.h++"
-#include "Basic.h++"
-#include "Passive.h++"
-#include "Ult.h++"
+#include <iostream>
+#include "Skill.hpp"
+#include "Basic.hpp"
+#include "Passive.hpp"
+#include "Ult.hpp"
 #include "CharacterEnums.hpp"
 #include "Status_Effect.hpp"
 #include "../gameplay/BattleContext.hpp"
@@ -61,6 +62,8 @@ public:
             basic->useBasic(battleContext);
         }
     }
+
+    void takeTurn() override;
 
     // Passives activators for listeners
 

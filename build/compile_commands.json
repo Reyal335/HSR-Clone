@@ -1,0 +1,68 @@
+[
+{
+  "directory": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build",
+  "command": "D:\\msys64\\ucrt64\\bin\\g++.exe -ID:/UsersMigrate/Sam/Desktop/hsr-clone/src -std=gnu++17 -o CMakeFiles\\MyProject.dir\\src\\characters\\Stelle\\Abilities\\FarewellHit.cpp.obj -c D:\\UsersMigrate\\Sam\\Desktop\\hsr-clone\\src\\characters\\Stelle\\Abilities\\FarewellHit.cpp",
+  "file": "D:/UsersMigrate/Sam/Desktop/hsr-clone/src/characters/Stelle/Abilities/FarewellHit.cpp",
+  "output": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/MyProject.dir/src/characters/Stelle/Abilities/FarewellHit.cpp.obj"
+},
+{
+  "directory": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build",
+  "command": "D:\\msys64\\ucrt64\\bin\\g++.exe -ID:/UsersMigrate/Sam/Desktop/hsr-clone/src -std=gnu++17 -o CMakeFiles\\MyProject.dir\\src\\characters\\Stelle\\Abilities\\RIPHomeRun.cpp.obj -c D:\\UsersMigrate\\Sam\\Desktop\\hsr-clone\\src\\characters\\Stelle\\Abilities\\RIPHomeRun.cpp",
+  "file": "D:/UsersMigrate/Sam/Desktop/hsr-clone/src/characters/Stelle/Abilities/RIPHomeRun.cpp",
+  "output": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/MyProject.dir/src/characters/Stelle/Abilities/RIPHomeRun.cpp.obj"
+},
+{
+  "directory": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build",
+  "command": "D:\\msys64\\ucrt64\\bin\\g++.exe -ID:/UsersMigrate/Sam/Desktop/hsr-clone/src -std=gnu++17 -o CMakeFiles\\MyProject.dir\\src\\characters\\Stelle\\Stelle.cpp.obj -c D:\\UsersMigrate\\Sam\\Desktop\\hsr-clone\\src\\characters\\Stelle\\Stelle.cpp",
+  "file": "D:/UsersMigrate/Sam/Desktop/hsr-clone/src/characters/Stelle/Stelle.cpp",
+  "output": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/MyProject.dir/src/characters/Stelle/Stelle.cpp.obj"
+},
+{
+  "directory": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build",
+  "command": "D:\\msys64\\ucrt64\\bin\\g++.exe -ID:/UsersMigrate/Sam/Desktop/hsr-clone/src -std=gnu++17 -o CMakeFiles\\MyProject.dir\\src\\enemies\\VoidRanger\\Abilities\\VortexLeap.cpp.obj -c D:\\UsersMigrate\\Sam\\Desktop\\hsr-clone\\src\\enemies\\VoidRanger\\Abilities\\VortexLeap.cpp",
+  "file": "D:/UsersMigrate/Sam/Desktop/hsr-clone/src/enemies/VoidRanger/Abilities/VortexLeap.cpp",
+  "output": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/MyProject.dir/src/enemies/VoidRanger/Abilities/VortexLeap.cpp.obj"
+},
+{
+  "directory": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build",
+  "command": "D:\\msys64\\ucrt64\\bin\\g++.exe -ID:/UsersMigrate/Sam/Desktop/hsr-clone/src -std=gnu++17 -o CMakeFiles\\MyProject.dir\\src\\enemies\\VoidRanger\\VoidRanger.cpp.obj -c D:\\UsersMigrate\\Sam\\Desktop\\hsr-clone\\src\\enemies\\VoidRanger\\VoidRanger.cpp",
+  "file": "D:/UsersMigrate/Sam/Desktop/hsr-clone/src/enemies/VoidRanger/VoidRanger.cpp",
+  "output": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/MyProject.dir/src/enemies/VoidRanger/VoidRanger.cpp.obj"
+},
+{
+  "directory": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build",
+  "command": "D:\\msys64\\ucrt64\\bin\\g++.exe -ID:/UsersMigrate/Sam/Desktop/hsr-clone/src -std=gnu++17 -o CMakeFiles\\MyProject.dir\\src\\entities\\Character.cpp.obj -c D:\\UsersMigrate\\Sam\\Desktop\\hsr-clone\\src\\entities\\Character.cpp",
+  "file": "D:/UsersMigrate/Sam/Desktop/hsr-clone/src/entities/Character.cpp",
+  "output": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/MyProject.dir/src/entities/Character.cpp.obj"
+},
+{
+  "directory": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build",
+  "command": "D:\\msys64\\ucrt64\\bin\\g++.exe -ID:/UsersMigrate/Sam/Desktop/hsr-clone/src -std=gnu++17 -o CMakeFiles\\MyProject.dir\\src\\entities\\Enemy.cpp.obj -c D:\\UsersMigrate\\Sam\\Desktop\\hsr-clone\\src\\entities\\Enemy.cpp",
+  "file": "D:/UsersMigrate/Sam/Desktop/hsr-clone/src/entities/Enemy.cpp",
+  "output": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/MyProject.dir/src/entities/Enemy.cpp.obj"
+},
+{
+  "directory": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build",
+  "command": "D:\\msys64\\ucrt64\\bin\\g++.exe -ID:/UsersMigrate/Sam/Desktop/hsr-clone/src -std=gnu++17 -o CMakeFiles\\MyProject.dir\\src\\entities\\EnemyLineup.cpp.obj -c D:\\UsersMigrate\\Sam\\Desktop\\hsr-clone\\src\\entities\\EnemyLineup.cpp",
+  "file": "D:/UsersMigrate/Sam/Desktop/hsr-clone/src/entities/EnemyLineup.cpp",
+  "output": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/MyProject.dir/src/entities/EnemyLineup.cpp.obj"
+},
+{
+  "directory": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build",
+  "command": "D:\\msys64\\ucrt64\\bin\\g++.exe -ID:/UsersMigrate/Sam/Desktop/hsr-clone/src -std=gnu++17 -o CMakeFiles\\MyProject.dir\\src\\entities\\Entity.cpp.obj -c D:\\UsersMigrate\\Sam\\Desktop\\hsr-clone\\src\\entities\\Entity.cpp",
+  "file": "D:/UsersMigrate/Sam/Desktop/hsr-clone/src/entities/Entity.cpp",
+  "output": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/MyProject.dir/src/entities/Entity.cpp.obj"
+},
+{
+  "directory": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build",
+  "command": "D:\\msys64\\ucrt64\\bin\\g++.exe -ID:/UsersMigrate/Sam/Desktop/hsr-clone/src -std=gnu++17 -o CMakeFiles\\MyProject.dir\\src\\gameplay\\Session.cpp.obj -c D:\\UsersMigrate\\Sam\\Desktop\\hsr-clone\\src\\gameplay\\Session.cpp",
+  "file": "D:/UsersMigrate/Sam/Desktop/hsr-clone/src/gameplay/Session.cpp",
+  "output": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/MyProject.dir/src/gameplay/Session.cpp.obj"
+},
+{
+  "directory": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build",
+  "command": "D:\\msys64\\ucrt64\\bin\\g++.exe -ID:/UsersMigrate/Sam/Desktop/hsr-clone/src -std=gnu++17 -o CMakeFiles\\MyProject.dir\\src\\main.cpp.obj -c D:\\UsersMigrate\\Sam\\Desktop\\hsr-clone\\src\\main.cpp",
+  "file": "D:/UsersMigrate/Sam/Desktop/hsr-clone/src/main.cpp",
+  "output": "D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/MyProject.dir/src/main.cpp.obj"
+}
+]

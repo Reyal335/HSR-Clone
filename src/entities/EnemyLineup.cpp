@@ -34,7 +34,10 @@ void EnemyLineup::placeEnemy(std::unique_ptr<Enemy> newEnemy) {
             if (lastSide == Sides::right) {
                 if (!isOccupied(leftAdjacent)) {
                     slots[leftAdjacent] = std::move(newEnemy);
+                    // Add enemy count
                     count++;
+
+                    // Ensures bounds for the left hand side of cursor
                     if (leftAdjacent > 0) {
                         --leftAdjacent;
                     }
@@ -43,7 +46,10 @@ void EnemyLineup::placeEnemy(std::unique_ptr<Enemy> newEnemy) {
             } else {
                 if (!isOccupied(rightAdjacent)) {
                     slots[rightAdjacent] = std::move(newEnemy);
+                    // Add Enemy count
                     count++;
+
+                    // Ensures bounds for the right hand side of cursor
                     if (rightAdjacent < 4) {
                         ++rightAdjacent;
                     }
@@ -75,4 +81,8 @@ void EnemyLineup::displayLineup() {
 
 std::array<std::unique_ptr<Enemy>, 5>& EnemyLineup::getLineup () {
     return slots;
+}
+
+size_t EnemyLineup::getCount() {
+    return count;
 }

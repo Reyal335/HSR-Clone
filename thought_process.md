@@ -27,3 +27,5 @@ For all intents and purposes no speed system for now to simplify
 
 
 For the passive
+
+## Next order of business: Queue system. I think the cursor targetting would be easier to implement after.

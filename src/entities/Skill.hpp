@@ -2,9 +2,8 @@
 
 #include <string>
 #include "CharacterEnums.hpp"
-#include "../gameplay/BattleContext.hpp"
 
-class BattleContext;
+struct BattleContext;
 
 class Skill{
 private:

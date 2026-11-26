@@ -47,3 +47,7 @@ void Character::setGameStats() {
     ultCharge = baseUltCharge;
     shield = 0;
 }
+
+void Character::takeTurn() {
+    std::cout << "do something";
+}

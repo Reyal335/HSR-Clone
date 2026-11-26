@@ -39,3 +39,7 @@ void Enemy::setGameStats() {
     ultCharge = baseUltCharge;
     shield = 0;
 }
+
+void Enemy::takeTurn() {
+    std::cout << "do something";
+}

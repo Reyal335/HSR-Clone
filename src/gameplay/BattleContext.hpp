@@ -17,7 +17,7 @@ struct BattleContext {
     Enemy* currentTarget = nullptr;
 
     EnemyLineup& allEnemies;
-    std::vector<Character&> allAllies;
+    std::vector<Character*> allAllies;
 
     /**  Cursor - Goes 0-4, Default -> [2]
                      V

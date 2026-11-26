@@ -1,4 +1,4 @@
-#include "../../../entities/Basic.h++"
+#include "../../../entities/Basic.hpp"
 #include <string>
 #include <iostream>
 #include "../../../entities/Enemy.hpp"

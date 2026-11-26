@@ -1,4 +1,5 @@
 #pragma once
+#include <cstddef>
 #include <iostream>
 #include <array>
 #include <memory>
@@ -28,6 +29,7 @@ public:
     void placeEnemy (std::unique_ptr<Enemy> newEnemy);
     bool isOccupied(int index);
     void displayLineup();
+    size_t getCount();
 
     std::array<std::unique_ptr<Enemy>, 5>& getLineup ();
 };

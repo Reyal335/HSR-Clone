@@ -1,17 +1,20 @@
-#include "../../../entities/Basic.h++"
+#include "../../../entities/Basic.hpp"
 #include <string>
 #include <iostream>
 #include "../../../entities/Enemy.hpp"
+#include "../../../gameplay/BattleContext.hpp"
 
 class VortexLeap : public Basic {
 
 public:
         VortexLeap() : Basic("Vortex Leap", "Physical") {}
 
-        void useBasic(int atk, Enemy& enemy) override {
+        void useBasic(BattleContext& battleContext) override {
+            int casterAtk = battleContext.caster.getAtk(); 
+
             std::cout << "> Void Ranger uses Vortex Leap!" << std::endl;
-            std::cout << "> Dealt " << atk << " damage to " << enemy.getName() << "!";
-            enemy.takeDamage(atk);
+            std::cout << "> Dealt " << casterAtk << " damage to " << battleContext.currentTarget->getName() << "!";
+            battleContext.currentTarget->takeDamage(casterAtk);
         }
 };
 

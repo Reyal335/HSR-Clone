@@ -1,0 +1,3 @@
+D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/MyProject.dir
+D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/edit_cache.dir
+D:/UsersMigrate/Sam/Desktop/hsr-clone/build/CMakeFiles/rebuild_cache.dir

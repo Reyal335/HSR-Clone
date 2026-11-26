@@ -2,10 +2,11 @@
 #include <string>
 #include <memory>
 #include <vector>
-#include "Skill.h++"
-#include "Basic.h++"
-#include "Passive.h++"
-#include "Ult.h++"
+#include <iostream>
+#include "Skill.hpp"
+#include "Basic.hpp"
+#include "Passive.hpp"
+#include "Ult.hpp"
 #include "CharacterEnums.hpp"
 #include "Status_Effect.hpp"
 #include "../gameplay/BattleContext.hpp"
@@ -60,5 +61,7 @@ public:
     // Incoming actions
     void takeDamage(int damage);
     void heal(int heal);
+
+    void takeTurn() override;
 
 };

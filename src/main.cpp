@@ -46,8 +46,7 @@ int cursesWindow() {
 int test() {
 
 
-    std::unique_ptr<Stelle> stelle = std::make_unique<Stelle>();
-    std::unique_ptr<VoidRanger> voidRanger = std::make_unique<VoidRanger>();
+    std::unique_ptr<Stelle> stelle = std::make_unique<Stelle>(1);
     // std::cout << "Stelle encounters a voidranger! " << std::endl;
 
     // std::cout << stelle->getName();
@@ -57,10 +56,10 @@ int test() {
 
     // stelle->performBasic(*voidRanger);
     // voidRanger->getHealth();
-    std::vector<std::unique_ptr<Character>> characters;
-    characters.push_back(std::move(stelle));
+    std::vector<std::unique_ptr<Character>> roster;
+    roster.push_back(std::move(stelle));
 
-    Session session{std::move(characters)};
+    Session session{std::move(roster)};
     session.startSession(1, 2);
 
     return 0;
