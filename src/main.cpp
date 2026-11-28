@@ -7,39 +7,14 @@
 #include "gameplay/Session.hpp"
 #include <vector>
 #include "entities/Character.hpp"
+#include "UI/Menu.hpp"
 
 using namespace std;
 
 int cursesWindow() {
-    cout << "testing this c++ application" << endl;
-    initscr();
-    cbreak();
-    keypad(stdscr, TRUE);
-    noecho();
-    curs_set(0);
-    refresh();
 
-    int height = 10, width = 40, start_y = 0, start_x = 0;
-    WINDOW* win = newwin(height, width, start_y, start_x);
-
-    if (has_colors() == FALSE) {
-        endwin();
-        std::cout << "Your terminal doesn't support colours." << std::endl;
-        return 1;
-    }
-
-    box(win, 0, 0);
-    mvwprintw(win, 1, 2, "Hello from ncurses!");
-    mvwprintw(win, 3, 2, "Press any key to exit...");
-    wrefresh(win);
-
-    getch();
-    std::cout << "hello reressr getch";
-    mvwprintw(win, 3, 2, "Press any key to exit...");
-
-    delwin(win);
-    endwin();
-
+    Menu menu{};
+    menu.displayMenu();
     return 0;
 }
 
