@@ -1,13 +1,12 @@
 #include <iostream> 
 #include <ncurses\curses.h>
 #include <windows.h>
-#include "./helpers/magic_enum.hpp"
 #include "characters/Stelle/Stelle.hpp"
 #include "enemies/VoidRanger/VoidRanger.hpp"
 #include "gameplay/Session.hpp"
 #include <vector>
 #include "entities/Character.hpp"
-#include "UI/Menu.hpp"
+#include "UI/Menu/Menu.hpp"
 
 using namespace std;
 
